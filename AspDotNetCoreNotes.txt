@@ -1,0 +1,19 @@
+1.Inversion Of Control => Invert the control of instantiation of object.  =>Loose coupling
+2.Constructor Injection 
+		=> List of required dependencies are passed as parameters of constructors.
+		=> Controller(IWeatherForecast _wf)
+		=> We need to configure the dependency that needs to be injected.
+		=> Any service that needs to be injected should be added to IServiceCollection so that it can be resolved by IServiceProvider
+3.Start Up class 
+		=> Configure(IApplicationBuilder ,IHostingEnvironment,IServiceProvider)
+		=>ConfigureServices (IServiceCollection services)
+				=>AddMvc => all the services needed for
+4.services.AddTransient<IServiceX,ServiceX>()				
+
+Http Request ====> Castrel ASP.Net WebServer =====> MVC middleware (Locates Controller who handle the request) ====> Controller activation => Resolve services => DI container
+
+Question
+--------
+IActionContext
+Grpc
+Signal R
